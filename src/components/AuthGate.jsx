@@ -20,7 +20,10 @@ export default function AuthGate({ children }) {
 
   const sendLink = async (e) => {
     e.preventDefault()
-    await supabase.auth.signInWithOtp({ email })
+    await supabase.auth.signInWithOtp({
+     email,
+     options: { emailRedirectTo: window.location.href }
+   })
     setSent(true)
   }
 
