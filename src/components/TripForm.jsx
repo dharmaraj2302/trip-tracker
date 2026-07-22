@@ -108,7 +108,7 @@ export default function TripForm({ onClose, onCreated }) {
   )
 
   return (
-    <div className="fixed inset-0 bg-ink/80 flex items-start md:items-center justify-center p-4 overflow-y-auto z-50">
+    <div className="fixed inset-0 bg-ink/80 flex items-start justify-center p-4 overflow-y-auto z-50">
       <form onSubmit={submit} className="bg-paper rounded-2xl p-6 w-full max-w-lg my-8 space-y-5">
         <h3 className="font-display text-2xl text-ink">Plan a trip</h3>
 
