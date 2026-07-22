@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Boarding-pass stub: dashed tear line with notch circles cut into left/right edges */
+.stub-divider {
+  position: relative;
+  border-left: 2px dashed rgba(18, 33, 58, 0.25);
+}
+
+.stub-divider::before,
+.stub-divider::after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #12213A;
+}
+
+.stub-divider::before { top: -9px; }
+.stub-divider::after { bottom: -9px; }
+
+.ticket-code {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
